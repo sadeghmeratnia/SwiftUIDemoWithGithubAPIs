@@ -14,6 +14,11 @@
 		72153EA024921B7F00DCE6D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72153E9F24921B7F00DCE6D7 /* Preview Assets.xcassets */; };
 		72153EA324921B7F00DCE6D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72153EA124921B7F00DCE6D7 /* LaunchScreen.storyboard */; };
 		72153EAE24921B7F00DCE6D7 /* SwiftUIDemoWithGithubAPIsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72153EAD24921B7F00DCE6D7 /* SwiftUIDemoWithGithubAPIsTests.swift */; };
+		72153EBE2492269200DCE6D7 /* NetworkRequestAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72153EBD2492269200DCE6D7 /* NetworkRequestAgent.swift */; };
+		72153EC0249226AD00DCE6D7 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72153EBF249226AD00DCE6D7 /* APIRouter.swift */; };
+		72153EC2249226DC00DCE6D7 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72153EC1249226DC00DCE6D7 /* NetworkError.swift */; };
+		72153EC4249226EE00DCE6D7 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72153EC3249226EE00DCE6D7 /* JsonParser.swift */; };
+		72153EC7249236DD00DCE6D7 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72153EC6249236DD00DCE6D7 /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,11 @@
 		72153EA924921B7F00DCE6D7 /* SwiftUIDemoWithGithubAPIsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIDemoWithGithubAPIsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72153EAD24921B7F00DCE6D7 /* SwiftUIDemoWithGithubAPIsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemoWithGithubAPIsTests.swift; sourceTree = "<group>"; };
 		72153EAF24921B7F00DCE6D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72153EBD2492269200DCE6D7 /* NetworkRequestAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestAgent.swift; sourceTree = "<group>"; };
+		72153EBF249226AD00DCE6D7 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		72153EC1249226DC00DCE6D7 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		72153EC3249226EE00DCE6D7 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
+		72153EC6249236DD00DCE6D7 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				72153EB824921C3700DCE6D7 /* App */,
+				72153EBC2492261C00DCE6D7 /* Network */,
 				72153EBB24921C8700DCE6D7 /* Modules */,
 				72153EBA24921C7500DCE6D7 /* Resources */,
 				72153E9E24921B7F00DCE6D7 /* Preview Content */,
@@ -135,8 +146,20 @@
 			isa = PBXGroup;
 			children = (
 				72153E9A24921B7D00DCE6D7 /* ContentView.swift */,
+				72153EC6249236DD00DCE6D7 /* UserModel.swift */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		72153EBC2492261C00DCE6D7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				72153EBD2492269200DCE6D7 /* NetworkRequestAgent.swift */,
+				72153EBF249226AD00DCE6D7 /* APIRouter.swift */,
+				72153EC1249226DC00DCE6D7 /* NetworkError.swift */,
+				72153EC3249226EE00DCE6D7 /* JsonParser.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,7 +264,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				72153E9724921B7D00DCE6D7 /* AppDelegate.swift in Sources */,
+				72153EC0249226AD00DCE6D7 /* APIRouter.swift in Sources */,
+				72153EC7249236DD00DCE6D7 /* UserModel.swift in Sources */,
 				72153E9924921B7D00DCE6D7 /* SceneDelegate.swift in Sources */,
+				72153EC2249226DC00DCE6D7 /* NetworkError.swift in Sources */,
+				72153EBE2492269200DCE6D7 /* NetworkRequestAgent.swift in Sources */,
+				72153EC4249226EE00DCE6D7 /* JsonParser.swift in Sources */,
 				72153E9B24921B7D00DCE6D7 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
