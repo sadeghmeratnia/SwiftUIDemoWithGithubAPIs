@@ -79,12 +79,9 @@
 		72153E9524921B7D00DCE6D7 /* SwiftUIDemoWithGithubAPIs */ = {
 			isa = PBXGroup;
 			children = (
-				72153E9624921B7D00DCE6D7 /* AppDelegate.swift */,
-				72153E9824921B7D00DCE6D7 /* SceneDelegate.swift */,
-				72153E9A24921B7D00DCE6D7 /* ContentView.swift */,
-				72153E9C24921B7F00DCE6D7 /* Assets.xcassets */,
-				72153EA124921B7F00DCE6D7 /* LaunchScreen.storyboard */,
-				72153EA424921B7F00DCE6D7 /* Info.plist */,
+				72153EB824921C3700DCE6D7 /* App */,
+				72153EBB24921C8700DCE6D7 /* Modules */,
+				72153EBA24921C7500DCE6D7 /* Resources */,
 				72153E9E24921B7F00DCE6D7 /* Preview Content */,
 			);
 			path = SwiftUIDemoWithGithubAPIs;
@@ -105,6 +102,41 @@
 				72153EAF24921B7F00DCE6D7 /* Info.plist */,
 			);
 			path = SwiftUIDemoWithGithubAPIsTests;
+			sourceTree = "<group>";
+		};
+		72153EB824921C3700DCE6D7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				72153E9624921B7D00DCE6D7 /* AppDelegate.swift */,
+				72153E9824921B7D00DCE6D7 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		72153EB924921C4500DCE6D7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				72153E9C24921B7F00DCE6D7 /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		72153EBA24921C7500DCE6D7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				72153EB924921C4500DCE6D7 /* Images */,
+				72153EA124921B7F00DCE6D7 /* LaunchScreen.storyboard */,
+				72153EA424921B7F00DCE6D7 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		72153EBB24921C8700DCE6D7 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				72153E9A24921B7D00DCE6D7 /* ContentView.swift */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,7 +398,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIDemoWithGithubAPIs/Preview Content\"";
 				DEVELOPMENT_TEAM = 9N424R5SGN;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SwiftUIDemoWithGithubAPIs/Info.plist;
+				INFOPLIST_FILE = SwiftUIDemoWithGithubAPIs/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -386,7 +418,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIDemoWithGithubAPIs/Preview Content\"";
 				DEVELOPMENT_TEAM = 9N424R5SGN;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = SwiftUIDemoWithGithubAPIs/Info.plist;
+				INFOPLIST_FILE = SwiftUIDemoWithGithubAPIs/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
