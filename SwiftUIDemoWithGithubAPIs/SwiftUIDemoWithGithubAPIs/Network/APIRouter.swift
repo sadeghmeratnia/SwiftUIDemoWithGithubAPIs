@@ -13,6 +13,7 @@ import Foundation
 
 enum APIRouter {
     case getUserInfo
+    case getRepositories
     
     private static let baseURLString = "https://api.github.com/"
     
@@ -34,7 +35,8 @@ enum APIRouter {
     
     private var method: HTTPMethod {
         switch self {
-        case .getUserInfo:
+        case .getUserInfo,
+             .getRepositories:
             return .get
         }
     }
@@ -43,6 +45,8 @@ enum APIRouter {
         switch self {
         case .getUserInfo:
             return "user"
+        case .getRepositories:
+            return "user/repos"
         }
     }
     
@@ -64,7 +68,7 @@ enum APIRouter {
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: 10)
         request.httpMethod = method.value
         
-        request.addValue("token d077dc09c3c4dfca9ca615b06b01f02e8032bae5", forHTTPHeaderField: "Authorization")
+        request.addValue("token aa2ec4874255c2c8492d66abe2521b05341dfb84", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         if let parameters = parameters {

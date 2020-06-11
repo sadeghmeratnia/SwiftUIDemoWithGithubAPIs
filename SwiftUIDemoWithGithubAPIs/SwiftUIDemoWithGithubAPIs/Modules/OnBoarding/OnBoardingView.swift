@@ -11,12 +11,9 @@ import Combine
 
 struct OnBoardingView: View {
     @ObservedObject var viewModel: OnBoardingViewModel
-    @State private var showHomeView = false
     
     init(viewModel: OnBoardingViewModel = OnBoardingViewModel()) {
-        
         self.viewModel = viewModel
-        self.viewModel.getUsers()
     }
     
     var body: some View {
@@ -26,6 +23,7 @@ struct OnBoardingView: View {
                 self.centerImage
             }
         }
+        .navigate(to: self.initilizeTheUserInfoView, when: self.$viewModel.showHomeView)
     }
     
     private var centerImage: some View {
@@ -33,6 +31,11 @@ struct OnBoardingView: View {
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: 200, height: 200)
+    }
+    
+    private var initilizeTheUserInfoView: some View {
+        let userInfoViewModel = UserInfoViewModel(model: self.viewModel.userModel.value)
+        return UserInfoView(viewModel: userInfoViewModel)
     }
 }
 
