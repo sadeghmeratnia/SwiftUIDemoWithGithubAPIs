@@ -12,7 +12,7 @@ import Foundation
 import Foundation
 
 enum APIRouter {
-    case test
+    case getUserInfo
     
     private static let baseURLString = "https://api.github.com/"
     
@@ -34,14 +34,14 @@ enum APIRouter {
     
     private var method: HTTPMethod {
         switch self {
-        case .test:
+        case .getUserInfo:
             return .get
         }
     }
     
     private var path: String {
         switch self {
-        case .test:
+        case .getUserInfo:
             return "user"
         }
     }
