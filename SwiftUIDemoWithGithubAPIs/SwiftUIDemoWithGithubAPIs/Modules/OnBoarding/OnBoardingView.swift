@@ -23,7 +23,7 @@ struct OnBoardingView: View {
                 self.centerImage
             }
         }
-        .navigate(to: self.initilizeTheUserInfoView, when: self.$viewModel.showHomeView)
+        .navigate(to: HomeView(), when: self.$viewModel.showHomeView)
     }
     
     private var centerImage: some View {

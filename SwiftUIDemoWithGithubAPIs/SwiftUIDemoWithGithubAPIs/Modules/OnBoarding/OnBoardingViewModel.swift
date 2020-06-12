@@ -15,12 +15,25 @@ class OnBoardingViewModel: ObservableObject {
     var userModel = CurrentValueSubject<UserModel?, Never>(nil)
     
     private var disposables = Set<AnyCancellable>()
+    private lazy var waitingGroup = DispatchGroup()
     
     init() {
         self.getRepositries()
+        self.getUsers()
+        self.notifyWhenAllRequestsSucceed()
+    }
+}
+
+extension OnBoardingViewModel {
+    
+    private func notifyWhenAllRequestsSucceed() {
+        self.waitingGroup.notify(queue: .main) { [weak self] in
+            self?.showHomeView = true
+        }
     }
     
     private func getUsers() {
+        self.waitingGroup.enter()
         let request: AnyPublisher<UserModel, NetworkError> = NetworkRequestAgent.run(.getUserInfo)
         
         request.sink(receiveCompletion: { completion in
@@ -28,35 +41,29 @@ class OnBoardingViewModel: ObservableObject {
             case .failure(let error):
                 print(error)
                 
-            case .finished: break
+            case .finished:
+                self.waitingGroup.leave()
             }
         }, receiveValue: { userModel in
-            self.showHomeView = true
             self.userModel.send(userModel)
         }).store(in: &disposables)
     }
     
     private func getRepositries() {
-        let request: AnyPublisher<[test], NetworkError> = NetworkRequestAgent.run(.getRepositories)
+        self.waitingGroup.enter()
+        let request: AnyPublisher<[ReposModel], NetworkError> = NetworkRequestAgent.run(.getRepositories)
         
         request.sink(receiveCompletion: { completion in
             switch completion {
             case .failure(let error):
                 print(error)
                 
-            case .finished: break
+            case .finished:
+                self.waitingGroup.leave()
             }
-        }, receiveValue: { userModel in
-            self.showHomeView = true
-//            self.userModel.send(userModel)
+        }, receiveValue: { reposModel in
+            print(reposModel)
+            //            self.userModel.send(userModel)
         }).store(in: &disposables)
     }
-}
-
-struct test: Decodable {
-    var id: Int64?
-    var node_id: String?
-    var name: String?
-    var full_name: String?
-    var `private`: Bool?
 }

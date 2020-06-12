@@ -9,7 +9,7 @@
 import Foundation
 
 //MARK: - UserModel
-struct UserModel: Decodable {
+struct UserModel: Codable {
     var login: String?
     var id: Int64?
     var nodeID: String?
@@ -86,7 +86,7 @@ extension UserModel {
 
 
 //MARK: - PlanModel
-struct PlanModel: Decodable {
+struct PlanModel: Codable {
     var name: String?
     var space: Int64?
     var collaborators: Int64?
