@@ -18,8 +18,6 @@ struct BaseList<Content>: View where Content: View {
     var body: some View {
         List {
             content
-                .scaledToFill()
-                .clipped()
                 .listRowInsets(EdgeInsets())
         }
     }

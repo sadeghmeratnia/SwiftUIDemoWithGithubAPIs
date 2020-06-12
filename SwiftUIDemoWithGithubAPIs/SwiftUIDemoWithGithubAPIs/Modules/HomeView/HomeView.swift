@@ -17,7 +17,8 @@ struct HomeView: View {
                 VStack {
                     Spacer()
                     if self.viewModel.currentView == .userInfo {
-                        UserInfoView()
+                        self.initilizeTheUserInfoView
+                        
                     } else if self.viewModel.currentView == .repos {
                         UserRepositoriesView()
                     }
@@ -58,6 +59,11 @@ struct HomeView: View {
             .onTapGesture {
                 self.viewModel.currentView = .repos
         }
+    }
+    
+    private var initilizeTheUserInfoView: some View {
+        let userInfoViewModel = UserInfoViewModel(model: self.viewModel.userModel)
+        return UserInfoView(viewModel: userInfoViewModel)
     }
 }
 

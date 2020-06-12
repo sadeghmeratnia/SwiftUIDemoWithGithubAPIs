@@ -12,6 +12,11 @@ import Combine
 
 class HomeViewModel: ObservableObject {
     @Published var currentView: TabBarIndices = .userInfo
+    @Published var userModel: UserModel
+    
+    init(model: UserModel? = UserModel()) {
+        self.userModel = model ?? UserModel()
+    }
 }
 
 enum TabBarIndices {

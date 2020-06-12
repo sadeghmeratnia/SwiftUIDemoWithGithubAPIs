@@ -44,6 +44,7 @@
 		72445DCA24935542008C8C19 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72445DC924935542008C8C19 /* HomeViewModel.swift */; };
 		72445DCE24935DAE008C8C19 /* UserRepositoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72445DCD24935DAE008C8C19 /* UserRepositoriesView.swift */; };
 		72445DD124936BC2008C8C19 /* DictionaryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72445DD024936BC2008C8C19 /* DictionaryEncoder.swift */; };
+		724FF71F249386F400F97219 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FF71E249386F400F97219 /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		72445DC924935542008C8C19 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		72445DCD24935DAE008C8C19 /* UserRepositoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoriesView.swift; sourceTree = "<group>"; };
 		72445DD024936BC2008C8C19 /* DictionaryEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryEncoder.swift; sourceTree = "<group>"; };
+		724FF71E249386F400F97219 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,8 +205,8 @@
 			isa = PBXGroup;
 			children = (
 				72445DC424934919008C8C19 /* HomeView */,
-				72445DC1249345F5008C8C19 /* ReposInfo */,
 				72153EED24928D7800DCE6D7 /* UserInfo */,
+				72445DC1249345F5008C8C19 /* ReposInfo */,
 				72153ECC24925E9C00DCE6D7 /* OnBoarding */,
 			);
 			path = Modules;
@@ -235,6 +237,7 @@
 			children = (
 				72153ED02492727B00DCE6D7 /* ViewExtensions.swift */,
 				72153EE9249276AD00DCE6D7 /* FontExtensions.swift */,
+				724FF71E249386F400F97219 /* StringExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				72153EF124928F7F00DCE6D7 /* UserInfoViewModel.swift in Sources */,
 				72153EF424929D7600DCE6D7 /* UserInfoRow.swift in Sources */,
 				72445DCA24935542008C8C19 /* HomeViewModel.swift in Sources */,
+				724FF71F249386F400F97219 /* StringExtensions.swift in Sources */,
 				72153ECE24925EFF00DCE6D7 /* OnBoardingViewModel.swift in Sources */,
 				72153EBE2492269200DCE6D7 /* NetworkRequestAgent.swift in Sources */,
 				72153EC4249226EE00DCE6D7 /* JsonParser.swift in Sources */,

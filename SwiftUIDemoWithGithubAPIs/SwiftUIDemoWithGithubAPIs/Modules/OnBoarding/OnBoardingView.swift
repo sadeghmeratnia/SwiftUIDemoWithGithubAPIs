@@ -23,7 +23,7 @@ struct OnBoardingView: View {
                 self.centerImage
             }
         }
-        .navigate(to: HomeView(), when: self.$viewModel.showHomeView)
+        .navigate(to: initilizeTheHomeView, when: self.$viewModel.showHomeView)
     }
     
     private var centerImage: some View {
@@ -33,9 +33,9 @@ struct OnBoardingView: View {
             .frame(width: 200, height: 200)
     }
     
-    private var initilizeTheUserInfoView: some View {
-        let userInfoViewModel = UserInfoViewModel(model: self.viewModel.userModel.value)
-        return UserInfoView(viewModel: userInfoViewModel)
+    private var initilizeTheHomeView: some View {
+        let homeViewModel = HomeViewModel(model: self.viewModel.userModel.value)
+        return HomeView(viewModel: homeViewModel)
     }
 }
 

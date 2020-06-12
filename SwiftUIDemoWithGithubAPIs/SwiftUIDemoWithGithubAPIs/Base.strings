@@ -1,8 +1,47 @@
 /* 
-  Base.strings
-  SwiftUIDemoWithGithubAPIs
+ Base.strings
+ SwiftUIDemoWithGithubAPIs
+ 
+ Created by Sadegh on 3/22/1399 AP.
+ Copyright © 1399 Sadegh. All rights reserved.
+ */
 
-  Created by Sadegh on 3/22/1399 AP.
-  Copyright © 1399 Sadegh. All rights reserved.
-*/
-"sadegh" = "صادق";
+
+"node_id" = "Node ID:";
+"avatar_url" = "Avatar URL:";
+"gravatar_id" = "Gravatar ID:";
+"url" = "URL:";
+"html_url" = "HTML URL:";
+"followers_url" = "Followers URL:";
+"following_url" = "Following URL:";
+"gists_url" = "Gists URL:";
+"starred_url" = "Starred URL:";
+"subscriptions_url" = "Subscriptions URL:";
+"organizations_url" = "Organizations URL:";
+"repos_url" = "Repos URL:";
+"events_url" = "Events URL:";
+"received_events_url" = "Received events URL:";
+"site_admin" = "Site admin:";
+"twitter_username" = "Twitter username:";
+"public_repos" = "Public repos:";
+"public_gists" = "Public gists:";
+"created_at" = "Created at:";
+"private_gists" = "Private gists:";
+"total_private_repos" = "Total private repos:";
+"owned_private_repos" = "Owned private repos:";
+"disk_usage" = "Disk usage:";
+"two_factor_authentication" = "Two factor authentication:";
+"login" = "Login:";
+"id" = "ID:";
+"collaborators" = "Collaborators";
+"type" = "Type:";
+"name" = "Name:";
+"company" = "Company:";
+"blog" = "Blog:";
+"location" = "Location:";
+"email" = "Email:";
+"hireable" = "Eireable:";
+"bio" = "Bio:";
+"followers" = "Followers:";
+"following" = "Following:";
+"plan" = "Plane:";
