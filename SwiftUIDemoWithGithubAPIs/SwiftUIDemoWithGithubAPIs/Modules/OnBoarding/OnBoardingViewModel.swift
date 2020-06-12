@@ -13,6 +13,7 @@ import Combine
 class OnBoardingViewModel: ObservableObject {
     @Published  var showHomeView = false
     var userModel = CurrentValueSubject<UserModel?, Never>(nil)
+    var repoModel = CurrentValueSubject<[RepoModel]?, Never>(nil)
     
     private var disposables = Set<AnyCancellable>()
     private lazy var waitingGroup = DispatchGroup()
@@ -51,7 +52,7 @@ extension OnBoardingViewModel {
     
     private func getRepositries() {
         self.waitingGroup.enter()
-        let request: AnyPublisher<[ReposModel], NetworkError> = NetworkRequestAgent.run(.getRepositories)
+        let request: AnyPublisher<[RepoModel], NetworkError> = NetworkRequestAgent.run(.getRepositories)
         
         request.sink(receiveCompletion: { completion in
             switch completion {
@@ -61,9 +62,8 @@ extension OnBoardingViewModel {
             case .finished:
                 self.waitingGroup.leave()
             }
-        }, receiveValue: { reposModel in
-            print(reposModel)
-            //            self.userModel.send(userModel)
+        }, receiveValue: { repos in
+            self.repoModel.send(repos)
         }).store(in: &disposables)
     }
 }

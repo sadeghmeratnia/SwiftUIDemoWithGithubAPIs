@@ -33,7 +33,7 @@
 "two_factor_authentication" = "Two factor authentication:";
 "login" = "Login:";
 "id" = "ID:";
-"collaborators" = "Collaborators";
+"collaborators" = "Collaborators:";
 "type" = "Type:";
 "name" = "Name:";
 "company" = "Company:";

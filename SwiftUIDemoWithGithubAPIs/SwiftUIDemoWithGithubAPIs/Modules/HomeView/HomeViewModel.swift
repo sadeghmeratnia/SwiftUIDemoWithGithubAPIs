@@ -13,9 +13,11 @@ import Combine
 class HomeViewModel: ObservableObject {
     @Published var currentView: TabBarIndices = .userInfo
     @Published var userModel: UserModel
+    @Published var repoModel: [RepoModel]
     
-    init(model: UserModel? = UserModel()) {
-        self.userModel = model ?? UserModel()
+    init(userModel: UserModel? = UserModel(), repoModel: [RepoModel]? = []) {
+        self.userModel = userModel ?? UserModel()
+        self.repoModel = repoModel ?? []
     }
 }
 

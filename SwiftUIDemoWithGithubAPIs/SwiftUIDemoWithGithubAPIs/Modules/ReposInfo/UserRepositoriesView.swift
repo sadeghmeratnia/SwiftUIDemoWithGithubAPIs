@@ -9,8 +9,19 @@
 import SwiftUI
 
 struct UserRepositoriesView: View {
+    @ObservedObject var viewModel: UserRepositoriesViewModel
+    
+    init(viewModel: UserRepositoriesViewModel = UserRepositoriesViewModel()) {
+        self.viewModel = viewModel
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        BaseList {
+            ForEach(self.viewModel.dataSource, id: \.ID) { model in
+                UserRepositoriesRow(model: model)
+                    .frame(height: 80)
+            }
+        }
     }
 }
 

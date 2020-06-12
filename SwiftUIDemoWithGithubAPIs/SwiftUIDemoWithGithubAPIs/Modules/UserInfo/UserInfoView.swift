@@ -19,7 +19,6 @@ struct UserInfoView: View {
     var body: some View {
         BaseList() {
             ForEach(self.viewModel.getModelFieldsAndValue().keys.sorted(by: <), id: \.self) { key in
-                
                 UserInfoRow(key: key, value: "\(self.viewModel.getModelFieldsAndValue()[key] ?? "-")")
                     .frame(height: 80)
             }

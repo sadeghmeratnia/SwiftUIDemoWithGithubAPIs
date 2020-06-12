@@ -9,7 +9,9 @@
 import SwiftUI
 
 enum ColorRefrences: String {
-    case baseText = "baseText"
+    case baseText          = "baseText"
+    case yellowAccessLevel = "yellowAccessLevel"
+    case greenAccessLevel  = "greenAccessLevel"
 }
 
 extension ColorRefrences {

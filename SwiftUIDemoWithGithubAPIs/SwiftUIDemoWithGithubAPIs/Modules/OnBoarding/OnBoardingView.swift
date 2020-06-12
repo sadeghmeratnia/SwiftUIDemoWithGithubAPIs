@@ -34,7 +34,7 @@ struct OnBoardingView: View {
     }
     
     private var initilizeTheHomeView: some View {
-        let homeViewModel = HomeViewModel(model: self.viewModel.userModel.value)
+        let homeViewModel = HomeViewModel(userModel: self.viewModel.userModel.value, repoModel: self.viewModel.repoModel.value)
         return HomeView(viewModel: homeViewModel)
     }
 }

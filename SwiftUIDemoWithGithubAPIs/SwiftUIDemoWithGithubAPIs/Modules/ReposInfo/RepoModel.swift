@@ -1,5 +1,5 @@
 //
-//  ReposModel.swift
+//  RepoModel.swift
 //  SwiftUIDemoWithGithubAPIs
 //
 //  Created by Sadegh on 3/23/1399 AP.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ReposModel: Codable {
+struct RepoModel: Codable {
     var ID: Int64?
     var nodeID: String?
     var name: String?
@@ -16,7 +16,7 @@ struct ReposModel: Codable {
     var isPrivate: Bool?
 }
 
-extension ReposModel {
+extension RepoModel {
     enum CodingKeys: String, CodingKey {
         case ID = "id"
         case nodeID = "node_id"

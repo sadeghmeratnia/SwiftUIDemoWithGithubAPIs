@@ -68,7 +68,7 @@ enum APIRouter {
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: 10)
         request.httpMethod = method.value
         
-        request.addValue("token 7cd0bc225bcaf7aef098434595a2e28e421a587b", forHTTPHeaderField: "Authorization")
+        request.addValue("token bdbe22020dc4af8d4a764f2810196c2c9d1005df", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         if let parameters = parameters {

@@ -20,7 +20,7 @@ struct HomeView: View {
                         self.initilizeTheUserInfoView
                         
                     } else if self.viewModel.currentView == .repos {
-                        UserRepositoriesView()
+                        self.initilizeTheRepoView
                     }
                     Spacer()
                     
@@ -65,11 +65,17 @@ struct HomeView: View {
         let userInfoViewModel = UserInfoViewModel(model: self.viewModel.userModel)
         return UserInfoView(viewModel: userInfoViewModel)
     }
+    
+    private var initilizeTheRepoView: some View {
+        let repoViewModel = UserRepositoriesViewModel(model: self.viewModel.repoModel)
+        return UserRepositoriesView(viewModel: repoViewModel)
+    }
 }
 
-
+#if DEBUG
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
     }
 }
+#endif

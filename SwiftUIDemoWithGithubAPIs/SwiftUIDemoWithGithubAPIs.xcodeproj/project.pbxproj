@@ -38,7 +38,9 @@
 		72153EF124928F7F00DCE6D7 /* UserInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72153EF024928F7F00DCE6D7 /* UserInfoViewModel.swift */; };
 		72153EF424929D7600DCE6D7 /* UserInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72153EF324929D7600DCE6D7 /* UserInfoRow.swift */; };
 		72153EF62492ACA600DCE6D7 /* Base.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72153EF52492ACA600DCE6D7 /* Base.strings */; };
-		72445DC32493460C008C8C19 /* ReposModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72445DC22493460C008C8C19 /* ReposModel.swift */; };
+		72338FFE249396F00029E98E /* UserRepositoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72338FFD249396F00029E98E /* UserRepositoriesViewModel.swift */; };
+		723390012493A5760029E98E /* UserRepositoriesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723390002493A5760029E98E /* UserRepositoriesRow.swift */; };
+		72445DC32493460C008C8C19 /* RepoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72445DC22493460C008C8C19 /* RepoModel.swift */; };
 		72445DC624934926008C8C19 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72445DC524934926008C8C19 /* HomeView.swift */; };
 		72445DC824934956008C8C19 /* BaseTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72445DC724934956008C8C19 /* BaseTabView.swift */; };
 		72445DCA24935542008C8C19 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72445DC924935542008C8C19 /* HomeViewModel.swift */; };
@@ -93,7 +95,9 @@
 		72153EF024928F7F00DCE6D7 /* UserInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewModel.swift; sourceTree = "<group>"; };
 		72153EF324929D7600DCE6D7 /* UserInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoRow.swift; sourceTree = "<group>"; };
 		72153EF52492ACA600DCE6D7 /* Base.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Base.strings; sourceTree = "<group>"; };
-		72445DC22493460C008C8C19 /* ReposModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposModel.swift; sourceTree = "<group>"; };
+		72338FFD249396F00029E98E /* UserRepositoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoriesViewModel.swift; sourceTree = "<group>"; };
+		723390002493A5760029E98E /* UserRepositoriesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoriesRow.swift; sourceTree = "<group>"; };
+		72445DC22493460C008C8C19 /* RepoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoModel.swift; sourceTree = "<group>"; };
 		72445DC524934926008C8C19 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		72445DC724934956008C8C19 /* BaseTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabView.swift; sourceTree = "<group>"; };
 		72445DC924935542008C8C19 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -294,11 +298,21 @@
 			path = Row;
 			sourceTree = "<group>";
 		};
+		72338FFF2493A54E0029E98E /* Row */ = {
+			isa = PBXGroup;
+			children = (
+				723390002493A5760029E98E /* UserRepositoriesRow.swift */,
+			);
+			path = Row;
+			sourceTree = "<group>";
+		};
 		72445DC1249345F5008C8C19 /* ReposInfo */ = {
 			isa = PBXGroup;
 			children = (
-				72445DC22493460C008C8C19 /* ReposModel.swift */,
+				72338FFF2493A54E0029E98E /* Row */,
 				72445DCD24935DAE008C8C19 /* UserRepositoriesView.swift */,
+				72338FFD249396F00029E98E /* UserRepositoriesViewModel.swift */,
+				72445DC22493460C008C8C19 /* RepoModel.swift */,
 			);
 			path = ReposInfo;
 			sourceTree = "<group>";
@@ -429,7 +443,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				72153ED12492727B00DCE6D7 /* ViewExtensions.swift in Sources */,
+				72338FFE249396F00029E98E /* UserRepositoriesViewModel.swift in Sources */,
 				72153ED8249273A300DCE6D7 /* BaseText.swift in Sources */,
+				723390012493A5760029E98E /* UserRepositoriesRow.swift in Sources */,
 				72153EC924924FFB00DCE6D7 /* OnBoardingView.swift in Sources */,
 				72153E9724921B7D00DCE6D7 /* AppDelegate.swift in Sources */,
 				72153EC0249226AD00DCE6D7 /* APIRouter.swift in Sources */,
@@ -438,7 +454,7 @@
 				72153EEA249276AD00DCE6D7 /* FontExtensions.swift in Sources */,
 				72153EC7249236DD00DCE6D7 /* UserModel.swift in Sources */,
 				72445DC824934956008C8C19 /* BaseTabView.swift in Sources */,
-				72445DC32493460C008C8C19 /* ReposModel.swift in Sources */,
+				72445DC32493460C008C8C19 /* RepoModel.swift in Sources */,
 				72153EEC24928D0E00DCE6D7 /* BaseList.swift in Sources */,
 				72153EEF24928D9000DCE6D7 /* UserInfoView.swift in Sources */,
 				72153E9924921B7D00DCE6D7 /* SceneDelegate.swift in Sources */,
