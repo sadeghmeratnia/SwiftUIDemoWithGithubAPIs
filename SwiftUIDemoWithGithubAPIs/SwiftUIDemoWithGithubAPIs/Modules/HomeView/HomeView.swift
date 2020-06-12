@@ -40,7 +40,8 @@ struct HomeView: View {
     }
     
     private var getUserInfoTabBarItem: some View {
-        Image(systemName: "house")
+        ImageRefrences.user.getImage
+            .renderingMode(.template)
             .resizable()
             .aspectRatio(contentMode: .fit)
             .padding(EdgeInsets(top: 12, leading: 20, bottom: 28, trailing: 20))
@@ -51,7 +52,8 @@ struct HomeView: View {
     }
     
     private var getUserReposTabBarItem: some View {
-        Image(systemName: "gear")
+        ImageRefrences.repository.getImage
+            .renderingMode(.template)
             .resizable()
             .aspectRatio(contentMode: .fit)
             .padding(EdgeInsets(top: 12, leading: 20, bottom: 28, trailing: 20))

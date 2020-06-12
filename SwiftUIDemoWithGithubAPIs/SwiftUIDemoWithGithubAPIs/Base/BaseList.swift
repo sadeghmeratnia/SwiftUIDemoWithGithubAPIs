@@ -12,6 +12,7 @@ struct BaseList<Content>: View where Content: View {
     private let content: Content
     
     init(@ViewBuilder content: () -> Content) {
+        UITableView.appearance().tableFooterView = UIView()
         self.content = content()
     }
     

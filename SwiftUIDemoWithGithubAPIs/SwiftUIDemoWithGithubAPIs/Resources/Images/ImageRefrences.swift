@@ -10,7 +10,9 @@ import Foundation
 import SwiftUI
 
 enum ImageRefrences: String {
-    case github = "github"
+    case github     = "github"
+    case user       = "user"
+    case repository = "repository"
     
     var getImage: Image {
         return Image(self.rawValue)
