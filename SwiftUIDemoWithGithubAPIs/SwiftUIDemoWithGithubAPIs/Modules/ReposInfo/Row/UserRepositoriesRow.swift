@@ -17,7 +17,7 @@ struct UserRepositoriesRow: View {
     
     var body: some View {
         let accessLevelText: String = (self.repoModel.isPrivate ?? false) ? "Private": "Public"
-        let accessLevelColor: Color = (self.repoModel.isPrivate ?? false) ? ColorRefrences.yellowAccessLevel.getColor: ColorRefrences.greenAccessLevel.getColor
+        let accessLevelColor: Color = (self.repoModel.isPrivate ?? false) ? ColorRefrences.yellowAccessLevel.getColor: ColorRefrences.darkGreen.getColor
         return VStack(alignment: .leading, spacing: 8) {
             self.getKeyValuePairs(key: "Name:", value: self.repoModel.name ?? "-")
             self.getKeyValuePairs(key: "Full name:", value: self.repoModel.fullName ?? "-")

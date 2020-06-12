@@ -7,15 +7,14 @@
 //
 
 import Foundation
-
-
-import Foundation
+import Combine
 
 enum APIRouter {
     case getUserInfo
     case getRepositories
     
     private static let baseURLString = "https://api.github.com/"
+    static var token = CurrentValueSubject<String, Never>("")
     
     private enum HTTPMethod {
         case get
@@ -68,7 +67,7 @@ enum APIRouter {
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: 10)
         request.httpMethod = method.value
         
-        request.addValue("token 4778c44dee681eabd2fe77a13b4db02af1448b79", forHTTPHeaderField: "Authorization")
+        request.addValue("token " + APIRouter.token.value, forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         if let parameters = parameters {
