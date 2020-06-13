@@ -22,8 +22,8 @@ struct UserInfoView: View {
                 UserInfoRow(key: key, value: "\(self.viewModel.getModelFieldsAndValue()[key] ?? "-")")
                     .frame(height: 80)
             }
-//            .navigationBarTitle("User Info", displayMode: .inline)
         }
+        .navigationBarTitle(Text("User Info"), displayMode: .inline)
     }
 }
 

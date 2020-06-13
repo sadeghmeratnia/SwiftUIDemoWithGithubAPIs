@@ -22,7 +22,7 @@ struct UserRepositoriesView: View {
                     .frame(height: 80)
             }
         }
-        .navigationBarTitle("Repository Info", displayMode: .inline)
+        .navigationBarTitle(Text("Repositories Info"), displayMode: .inline)
     }
 }
 

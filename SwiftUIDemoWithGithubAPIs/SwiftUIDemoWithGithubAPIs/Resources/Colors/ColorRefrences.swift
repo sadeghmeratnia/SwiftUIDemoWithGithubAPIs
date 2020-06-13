@@ -13,6 +13,7 @@ enum ColorRefrences: String {
     case yellowAccessLevel = "yellowAccessLevel"
     case darkGreen         = "darkGreen"
     case lightGreen        = "lightGreen"
+    case grayColor         = "grayColor"
 }
 
 extension ColorRefrences {

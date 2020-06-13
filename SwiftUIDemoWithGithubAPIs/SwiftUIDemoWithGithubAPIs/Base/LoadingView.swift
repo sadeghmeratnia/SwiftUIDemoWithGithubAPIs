@@ -23,12 +23,9 @@ struct ActivityIndicator: UIViewRepresentable {
 
 struct LoadingView: View {
     
-//    @Binding var isShowing: Bool
-    
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                Text("Loading...")
                 ActivityIndicator(isAnimating: .constant(true), style: .large)
             }
             .frame(width: geometry.size.width / 2,

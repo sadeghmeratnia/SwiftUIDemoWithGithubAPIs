@@ -164,7 +164,6 @@
 				72445DCF24936BB7008C8C19 /* Utils */,
 				72153ED2249272A100DCE6D7 /* Base */,
 				72153E9E24921B7F00DCE6D7 /* Preview Content */,
-				72153EF52492ACA600DCE6D7 /* Base.strings */,
 			);
 			path = SwiftUIDemoWithGithubAPIs;
 			sourceTree = "<group>";
@@ -340,6 +339,7 @@
 		72445DCF24936BB7008C8C19 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				72153EF52492ACA600DCE6D7 /* Base.strings */,
 				72445DD024936BC2008C8C19 /* DictionaryEncoder.swift */,
 			);
 			path = Utils;

@@ -18,7 +18,6 @@ struct BaseNavigationView<Content>: View where Content: View {
     var body: some View {
         NavigationView {
             content
-                .navigationBarTitle("", displayMode: .inline)
         }
     }
 }
