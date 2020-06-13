@@ -222,7 +222,6 @@
 				72445DC424934919008C8C19 /* HomeView */,
 				72153EED24928D7800DCE6D7 /* UserInfo */,
 				72445DC1249345F5008C8C19 /* ReposInfo */,
-				72153ECC24925E9C00DCE6D7 /* OnBoarding */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -236,13 +235,6 @@
 				72153EC3249226EE00DCE6D7 /* JsonParser.swift */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		72153ECC24925E9C00DCE6D7 /* OnBoarding */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = OnBoarding;
 			sourceTree = "<group>";
 		};
 		72153ECF2492725300DCE6D7 /* Extensions */ = {
